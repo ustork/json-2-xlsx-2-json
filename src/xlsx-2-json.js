@@ -5,6 +5,8 @@ import path from "path";
 import xlsx from "node-xlsx";
 
 function stringToObj(path, value, obj) {
+  if (!path) return;
+
   var parts = path.split("."),
     part;
   var last = parts.pop();
